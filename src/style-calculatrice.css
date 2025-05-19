@@ -1,0 +1,163 @@
+/* Styles pour la calculatrice */
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.calculator {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  position: relative;
+}
+
+.display {
+  background: #1e1e1e;
+  color: #00ffae;
+  font-size: 2rem;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: right;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  transition: background 0.2s, transform 0.1s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d4d4d4;
+  transform: scale(1.05);
+}
+
+.btn.action {
+  background-color: #ff9f43;
+  color: white;
+}
+
+.btn.action:hover {
+  background-color: #e88f2a;
+}
+
+.btn.equal {
+  grid-column: span 3;
+  background-color: #00c896;
+  color: white;
+  padding: 10px; /* Réduction du padding pour ajuster la hauteur */
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+
+.btn.equal:hover {
+  background-color: #00b485;
+}
+
+.toggle-history {
+  grid-column: span 1;
+  background: #4a4a4a;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: background 0.2s, transform 0.1s;
+  cursor: pointer;
+}
+
+.toggle-history:hover {
+  background: #3a3a3a;
+  transform: scale(1.05);
+}
+
+.history {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-left: 1px solid #ccc;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.history.visible {
+  right: 0;
+}
+
+.history-icon {
+  top: 10px;
+  right: 10px;
+  background: #4a4a4a;
+  color: white;
+  border: none;
+  padding: 10px; 
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.2s, transform 0.1s; 
+}
+
+.history-icon:hover {
+  background-color: #d4d4d4; 
+  transform: scale(1.05); 
+}
+
+.history-icon svg {
+  transition: transform 0.5s ease-in-out;
+  display: inline-block;
+}
+
+.history h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.history .entry {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.history .entry span {
+  color: #555;
+}
+
+.history .entry strong {
+  color: #00c896;
+}
+
+
+

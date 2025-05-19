@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculatrice </title>
+  <link rel="stylesheet" href="src/style-calculatrice.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+
+</head>
+    <body>
+       <!-- Dropdown Menu -->
+    <div class="dropdown" style="position: absolute; top: 10px; left: 10px; z-index: 1000; ">
+      <label tabindex="0" class="btn m-1 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white">Menu</label>
+      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="acceuil.html" target="_self">Acceuil</a></li>
+        <li><a href="calculatrice.html" target="_self">Calculatrice</a></li>
+        <li><a href="/contact" target="_self">Me contacter</a></li>
+        <li><a href="bateau-pref.html" target="_self">Mes bateaux préférés</a></li>
+        <li><a href="credits.html" target="_self">Credits</a></li>
+      </ul>
+    </div>
+      <div class="calculator">
+        <div class="display" id="display">0</div>
+          <div class="buttons">
+            <button class="btn action" onclick="clearDisplay()">AC</button>
+          <button class="btn action" onclick="input()">%</button>
+          <button class="btn action" onclick="input('/')">/</button>
+          <button class="btn action" onclick="backspace()">⌫</button>
+    
+          <button class="btn" onclick="input('7')">7</button>
+          <button class="btn" onclick="input('8')">8</button>
+          <button class="btn" onclick="input('9')">9</button>
+          <button class="btn action" onclick="input('*')">×</button>
+    
+          <button class="btn" onclick="input('4')">4</button>
+          <button class="btn" onclick="input('5')">5</button>
+          <button class="btn" onclick="input('6')">6</button>
+          <button class="btn action" onclick="input('-')">−</button>
+    
+          <button class="btn" onclick="input('1')">1</button>
+          <button class="btn" onclick="input('2')">2</button>
+          <button class="btn" onclick="input('3')">3</button>
+          <button class="btn action" onclick="input('+')">+</button>
+    
+          <button class="btn" onclick="input('0')">0</button>
+          <button class="btn" onclick="input('.')">.</button>
+          <button class="btn" onclick="input('(')">(</button>
+          <button class="btn" onclick="input(')')">)</button>
+          <button class="btn equal" onclick="calculate()">=</button>
+
+
+            <div id="historyIcon" class="history-icon" style=" grid-column: span 1;
+  background: #4a4a4a;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: background 0.2s, scale(1.05) 0.1s;
+  cursor: pointer;">
+              <svg class="history-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <g>
+                  <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                  <path d="M3 3v5h5" />
+                </g>
+                <line x1="12" y1="12" x2="12" y2="7" />
+                <line x1="12" y1="12" x2="16" y2="14" />
+              </svg>
+            </div>
+  <script src="src/script-calculatrice.js"></script>
+</body>
+</html>
+
