@@ -73,10 +73,7 @@ function toggleHistory() {
   historyPanel.classList.toggle('visible');
   updateHistoryPanel();
 
-  // Trigger the animation
-  if (historyPanel.classList.contains('visible')) {
-    startAnimation();
-  } 
+  startAnimation();
 }
 
 function updateHistoryPanel() {
@@ -110,6 +107,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const historyIcon = document.querySelector('.history-icon');
   if (historyIcon) {
     historyIcon.addEventListener('click', toggleHistory);
+  }
+
+  const historyButton = document.querySelector('.history-icon');
+
+  if (historyButton) {
+    historyButton.addEventListener('click', () => {
+      historyButton.classList.add('clicked');
+
+      // Supprimer la classe après l'animation pour permettre de la rejouer
+      setTimeout(() => {
+        historyButton.classList.remove('clicked');
+      }, 300); // Durée de l'animation définie dans le CSS
+    });
   }
 });
 

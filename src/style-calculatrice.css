@@ -66,13 +66,18 @@ body {
   background-color: #e88f2a;
 }
 
+
 .btn.equal {
   grid-column: span 3;
   background-color: #00c896;
   color: white;
-  padding: 10px; /* Réduction du padding pour ajuster la hauteur */
   font-size: 1.5rem;
-  border-radius: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding-top: 5px; 
 }
 
 .btn.equal:hover {
@@ -89,6 +94,7 @@ body {
   font-size: 1.2rem;
   transition: background 0.2s, transform 0.1s;
   cursor: pointer;
+
 }
 
 .toggle-history:hover {
@@ -157,6 +163,22 @@ body {
 
 .history .entry strong {
   color: #00c896;
+}
+
+@keyframes button-click {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.history-icon.clicked {
+  animation: button-click 0.3s ease-in-out;
 }
 
 
