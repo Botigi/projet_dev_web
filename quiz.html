@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sunset">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Final - QCM Grid + Flou</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      plugins: [daisyui],
+      daisyui: {
+        themes: ["sunset"],
+      },
+    };
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css">
+</head>
+<body class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 min-h-screen text-white font-sans font-bold">
+  <div class="dropdown" style="position: absolute; top: 10px; left: 10px; z-index: 1000; ">
+    <label tabindex="0" class="btn m-1 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white">Menu</label>
+    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-black font-bold">
+    <li><a href="acceuil.html" target="_self">Acceuil</a></li>
+    <li><a href="calculatrice.html" target="_self">Calculatrice</a></li>
+    <li><a href="quiz.html" target="_self">Me contacter</a></li>
+    <li><a href="bateau-pref.html" target="_self">Mes bateaux préférés</a></li>
+    <li><a href="credits.html" target="_self">Credits</a></li>
+    </ul>
+  </div> 
+  <main class="max-w-4xl mx-auto p-6 bg-base-100 shadow-lg rounded-lg">
+      <div>         
+        <h1 class="text-center text-2xl font-bold mb-6 text-gray-800">Avant de me contacter, un petit quiz</h1>
+      </div>
+    <div class="parent grid grid-cols-2 gap-6">
+      <div class="question p-4 bg-gray-100 rounded-lg shadow-md">
+        <p class="font-semibold text-lg mb-2 text-gray-800">Question 1</p>
+        <label class="block text-black"><input type="radio" name="q1" value="a" class="mr-2"> Option A</label>
+        <label class="block text-black"><input type="radio" name="q1" value="b" class="mr-2"> Option B</label>
+        <label class="block text-black"><input type="radio" name="q1" value="c" class="mr-2"> Option C</label>
+      </div>
+      <div class="question p-4 bg-gray-100 rounded-lg shadow-md">
+        <p class="font-semibold text-lg mb-2 text-gray-800">Question 2</p>
+        <label class="block text-black"><input type="radio" name="q2" value="a" class="mr-2"> Option A</label>
+        <label class="block text-black"><input type="radio" name="q2" value="b" class="mr-2"> Option B</label>
+        <label class="block text-black"><input type="radio" name="q2" value="c" class="mr-2"> Option C</label>
+      </div>
+      <div class="question p-4 bg-gray-100 rounded-lg shadow-md">
+        <p class="font-semibold text-lg mb-2 text-gray-800">Question 3</p>
+        <label class="block text-black"><input type="radio" name="q3" value="a" class="mr-2"> Option A</label>
+        <label class="block text-black"><input type="radio" name="q3" value="b" class="mr-2"> Option B</label>
+        <label class="block text-black"><input type="radio" name="q3" value="c" class="mr-2"> Option C</label>
+      </div>
+      <div class="question p-4 bg-gray-100 rounded-lg shadow-md">
+        <p class="font-semibold text-lg mb-2 text-gray-800">Question 4</p>
+        <label class="block text-black"><input type="radio" name="q4" value="a" class="mr-2"> Option A</label>
+        <label class="block text-black"><input type="radio" name="q4" value="b" class="mr-2"> Option B</label>
+        <label class="block text-black"><input type="radio" name="q4" value="c" class="mr-2"> Option C</label>
+      </div>
+      <div class="question p-4 bg-gray-100 rounded-lg shadow-md">
+        <p class="font-semibold text-lg mb-2 text-gray-800">Question 5</p>
+        <label class="block text-black"><input type="radio" name="q5" value="a" class="mr-2"> Option A</label>
+        <label class="block text-black"><input type="radio" name="q5" value="b" class="mr-2"> Option B</label>
+        <label class="block text-black"><input type="radio" name="q5" value="c" class="mr-2"> Option C</label>
+      </div>
+      <div class="question p-4 bg-gray-100 rounded-lg shadow-md">
+        <p class="font-semibold text-lg mb-2 text-gray-800">Question 6</p>
+        <label class="block text-black"><input type="radio" name="q6" value="a" class="mr-2"> Option A</label>
+        <label class="block text-black"><input type="radio" name="q6" value="b" class="mr-2"> Option B</label>
+        <label class="block text-black"><input type="radio" name="q6" value="c" class="mr-2"> Option C</label>
+      </div>
+    </div>
+  </main>
+  <div class="flex justify-center mt-6 space-x-4">
+    <button onclick="verifierReponses()" class="btn btn-primary">Vérifier mes réponses</button>
+    <button class="btn btn-secondary cheat-button" onclick="brutForce()">Mode Triche</button>
+  </div>
+  <script src="src/script-quiz.js"></script>
+</body>
+</html>

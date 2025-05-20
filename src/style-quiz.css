@@ -1,0 +1,73 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px; /* Increased gap for better spacing */
+  width: 700px; /* Adjusted width for better layout */
+  height: auto; /* Allow height to adjust dynamically */
+  margin: 0 auto; /* Center the grid */
+  padding: 20px; /* Add padding around the grid */
+  background-color: #ffffff; /* Add a background color */
+  border-radius: 15px; /* Round the corners of the container */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: #e6f7ff; /* Light blue background for questions */
+  padding: 10px;
+  border: 1px solid #b3e5fc; /* Match border color with background */
+  filter: blur(5px); /* Apply blur effect by default */
+  pointer-events: none; /* Disable interaction for blurred questions */
+  transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.question:first-child {
+  filter: blur(0); /* Make the first question visible */
+  pointer-events: auto; /* Enable interaction for the first question */
+}
+
+.question:hover {
+  filter: blur(0); /* Ensure no blur on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  background-color: #d1f0ff; /* Slightly darker blue on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.question p {
+  margin: 0 0 10px 0;
+  font-weight: bold; /* Make question text bold */
+}
+
+.question label {
+  margin: 5px 0;
+  cursor: pointer; /* Add pointer cursor for better UX */
+}
+
+input[type="radio"] {
+  margin-right: 5px; /* Add spacing between radio and label */
+  accent-color: #007bff; /* Change radio button color */
+}
+
+/* Added cheat-button styling */
+.cheat-button {
+  background-color: #ff9800;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cheat-button:hover {
+  background-color: #e68a00;
+}
+
