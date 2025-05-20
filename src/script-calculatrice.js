@@ -5,7 +5,7 @@ let historyPanel = null;
 let history = [];
 
 function input(value) {
-  if (display.innerText === '0' && value !== '.' && value !== '(' && value !== ')') {
+  if (display.innerText === '0' && value !== '.' && value !== '(' && value !== ')' && value !== '%') {
     display.innerText = value;
   } else {
     display.innerText += value;
@@ -26,7 +26,26 @@ function backspace() {
 
 function calculate() {
   try {
-    const expression = display.innerText.replace(/×/g, '*').replace(/−/g, '-');
+    let expression = display.innerText
+      .replace(/×/g, '*')
+      .replace(/−/g, '-');
+
+    // Vérifier et traiter les cas de modulo
+    if (expression.includes('%')) {
+      const parts = expression.split('%');
+      if (parts.length === 2) {
+        const left = eval(parts[0]); // Évaluer la partie gauche
+        const right = eval(parts[1]); // Évaluer la partie droite
+        if (!isNaN(left) && !isNaN(right)) {
+          const result = left % right; // Calculer le modulo
+          addToHistory(expression, result);
+          display.innerText = result;
+          return;
+        }
+      }
+      throw new Error('Invalid Modulo Expression');
+    }
+
     const result = eval(expression);
     if (Number.isFinite(result)) {
       addToHistory(expression, result);
