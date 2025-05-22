@@ -89,7 +89,7 @@ function startAnimation() {
     icon.style.transform = 'rotate(-50deg)';
     setTimeout(() => {
       icon.style.transform = 'rotate(0deg)';
-    }, 700); // Attendre 0.7 seconde (700 ms)
+    }, 700); // Attendre 0.7 seconde
   }
 }
 
@@ -99,7 +99,7 @@ function stopAnimation() {
     icon.style.transform = 'rotate(-50deg)';
     setTimeout(() => {
       icon.style.transform = 'rotate(0deg)';
-    }, 700); // Attendre 0.7 seconde (700 ms)
+    }, 700); // Attendre 0.7 seconde
   }
 }
 
@@ -115,10 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
     historyButton.addEventListener('click', () => {
       historyButton.classList.add('clicked');
 
-      // Supprimer la classe après l'animation pour permettre de la rejouer
       setTimeout(() => {
         historyButton.classList.remove('clicked');
-      }, 300); // Durée de l'animation définie dans le CSS
+      }, 300); 
     });
   }
 });

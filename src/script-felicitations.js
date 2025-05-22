@@ -1,4 +1,3 @@
-// Créer des confettis
 function creerConfettis() {
     const couleurs = ['#f00', '#0f0', '#00f', '#ff0', '#f0f', '#0ff'];
     
@@ -13,7 +12,6 @@ function creerConfettis() {
     }
 }
 
-// Ajouter les styles d'animation pour les confettis
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fall {
@@ -29,5 +27,4 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Lancer les confettis au chargement de la page
 window.onload = creerConfettis;
