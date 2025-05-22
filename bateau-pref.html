@@ -5,22 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mes bateaux préférés</title>
 
-    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
-    
-    <!-- Animations -->
-    <script>
-        function toggleDetails(id) {
-            const elem = document.getElementById(id);
-            elem.classList.toggle("hidden");
-        }
-    </script>
 </head>
 <body class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 min-h-screen text-white font-sans">
 
-    <!-- Menu déroulant -->
     <div class="dropdown absolute top-2 left-2 z-50">
         <label tabindex="0" class="btn m-1 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white border-none">Menu</label>
         <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-black font-bold">
@@ -32,16 +21,13 @@
         </ul>
     </div>
 
-    <!-- Titre principal -->
     <div class="text-center mt-16">
         <h1 class="text-4xl font-bold mb-4 drop-shadow-lg">🌅 Mes Bateaux Préférés</h1>
         <p class="text-lg italic">Découvre trois cata emblématiques pour t'évader en mer.</p>
     </div>
 
-    <!-- Section des bateaux -->
     <div class="grid md:grid-cols-3 gap-6 p-8">
         
-        <!-- FUNBOAT -->
         <div class="card bg-white text-black shadow-xl transform hover:scale-105 transition-transform duration-300">
             <figure><img src="src/imgs/funboat.jpg" alt="Funboat" class="h-48 w-full object-cover"></figure>
             <div class="card-body">
@@ -61,7 +47,6 @@
             </div>
         </div>
 
-        <!-- DART 16 -->
         <div class="card bg-white text-black shadow-xl transform hover:scale-105 transition-transform duration-300">
             <figure><img src="src/imgs/dart16.jpg" alt="Dart 16" class="h-48 w-full object-cover"></figure>
             <div class="card-body">
@@ -81,7 +66,6 @@
             </div>
         </div>
 
-        <!-- SL 5.2 -->
         <div class="card bg-white text-black shadow-xl transform hover:scale-105 transition-transform duration-300">
             <figure><img src="src/imgs/sl52.jpg" alt="SL 5.2" class="h-48 w-full object-cover"></figure>
             <div class="card-body">
@@ -103,5 +87,6 @@
 
     </div>
 
+    <script src="./src/script-bateau-pref.js"></script>
 </body>
 </html>
