@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mes bateaux préférés</title>
+  <link href="./src/output.css" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 min-h-screen text-white font-sans">
 
-    <div class="dropdown absolute top-2 left-2 z-50">
+   <div class="dropdown absolute top-2 left-2 z-50">
         <label tabindex="0" class="btn m-1 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white border-none">Menu</label>
         <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-black font-bold">
             <li><a href="acceuil.html" target="_self">Acceuil</a></li>
@@ -21,69 +20,74 @@
         </ul>
     </div>
 
-    <div class="text-center mt-16">
+    <div class="text-center ">
+        <br><br><br><br>
         <h1 class="text-4xl font-bold mb-4 drop-shadow-lg">🌅 Mes Bateaux Préférés</h1>
         <p class="text-lg italic">Découvre trois cata emblématiques pour t'évader en mer.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6 p-8">
-        
-        <div class="card bg-white text-black shadow-xl transform hover:scale-105 transition-transform duration-300">
-            <figure><img src="src/imgs/funboat.jpg" alt="Funboat" class="h-48 w-full object-cover"></figure>
-            <div class="card-body">
-                <h2 class="card-title">Funboat</h2>
-                <p>Un dériveur très stable, idéal pour les débutants ou les balades tranquilles.</p>
-                <p>Le premier bateau dont j'ai été le capitaine ! Beaucoup de souvenir d'enfance.</p>
-                <div class="card-actions justify-end">
-                    <button onclick="toggleDetails('details-funboat')" class="btn btn-sm bg-yellow-400 text-white">+ D'infos</button>
-                </div>
-                <div id="details-funboat" class="mt-2 hidden text-sm">
-                    <ul class="list-disc pl-5">
-                        <li>Longueur : 3,90 m</li>
-                        <li>Facile à manœuvrer</li>
-                        <li>Utilisation loisir ou école de voile</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <div class="card bg-white text-black shadow-xl transform hover:scale-105 transition-transform duration-300">
-            <figure><img src="src/imgs/dart16.jpg" alt="Dart 16" class="h-48 w-full object-cover"></figure>
-            <div class="card-body">
-                <h2 class="card-title">Dart 16</h2>
-                <p>Un catamaran sportif qui combine vitesse et accessibilité.</p>
-                <p>C'est le bateau que je connais par coeur avec quelques centaines d'heure dessu</p>
-                <div class="card-actions justify-end">
-                    <button onclick="toggleDetails('details-dart16')" class="btn btn-sm bg-red-500 text-white">+ D'infos</button>
-                </div>
-                <div id="details-dart16" class="mt-2 hidden text-sm">
-                    <ul class="list-disc pl-5">
-                        <li>Longueur : 4,80 m</li>
-                        <li>Catamaran léger et rapide</li>
-                        <li>Parfait pour recherhcer les premieres sensations fortes</li>
-                    </ul>
+    <div class="flex justify-center items-center min-h-[60vh]">
+        <div class="grid md:grid-cols-3 gap-6 p-8">
+            
+            <div class="card bg-white text-black shadow-xl transform hover:scale-105 transition-transform duration-300">
+                <figure><img src="src/imgs/funboat.jpg" alt="Funboat" class="h-48 w-full object-cover"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Funboat</h2>
+                    <p>Un dériveur très stable, idéal pour les débutants ou les balades tranquilles.</p>
+                    <p>Le premier bateau dont j'ai été le capitaine ! Beaucoup de souvenir d'enfance.</p>
+                    <div class="card-actions justify-end">
+                        <button onclick="toggleDetails('details-funboat')" class="btn btn-sm bg-yellow-400 text-white">+ D'infos</button>
+                    </div>
+                    <div id="details-funboat" class="mt-2 hidden text-sm">
+                        <ul class="list-disc pl-5">
+                            <li>Longueur : 3,90 m</li>
+                            <li>Facile à manœuvrer</li>
+                            <li>Utilisation loisir ou école de voile</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card bg-white text-black shadow-xl transform hover:scale-105 transition-transform duration-300">
-            <figure><img src="src/imgs/sl52.jpg" alt="SL 5.2" class="h-48 w-full object-cover"></figure>
-            <div class="card-body">
-                <h2 class="card-title">SL 5.2</h2>
-                <p>Un catamaran de performance pour les navigateurs expérimentés.</p>
-                <p>Tres spprtif mais donc aussi fragile, c'est vraiment mon preferer avec leauel on s'amuse le plus.</p>
-                <div class="card-actions justify-end">
-                    <button onclick="toggleDetails('details-sl52')" class="btn btn-sm bg-pink-500 text-white">+ D'infos</button>
+            <div class="card bg-white text-black shadow-xl transform hover:scale-105 transition-transform duration-300">
+                <figure><img src="src/imgs/dart16.jpg" alt="Dart 16" class="h-48 w-full object-cover"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Dart 16</h2>
+                    <p>Un catamaran sportif qui combine vitesse et accessibilité.</p>
+                    <p>C'est le bateau que je connais par coeur avec quelques centaines d'heure dessu</p>
+                    <div class="card-actions justify-end">
+                        <button onclick="toggleDetails('details-dart16')" class="btn btn-sm bg-red-500 text-white">+ D'infos</button>
+                    </div>
+                    <div id="details-dart16" class="mt-2 hidden text-sm">
+                        <ul class="list-disc pl-5">
+                            <li>Longueur : 4,80 m</li>
+                            <li>Catamaran léger et rapide</li>
+                            <li>Parfait pour recherhcer les premieres sensations fortes</li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="details-sl52" class="mt-2 hidden text-sm">
-                    <ul class="list-disc pl-5">
-                        <li>Longueur : 5,20 m</li>
-                        <li>Très rapide et puissant</li>
-                        <li>Pour amateurs de sensations fort et débuter la compétition</li>
-                    </ul>
+            </div>
+
+            <div class="card bg-white text-black shadow-xl transform hover:scale-105 transition-transform duration-300">
+                <figure><img src="src/imgs/sl52.jpg" alt="SL 5.2" class="h-48 w-full object-cover"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">SL 5.2</h2>
+                    <p>Un catamaran de performance pour les navigateurs expérimentés.</p>
+                    <p>Tres spprtif mais donc aussi fragile, c'est vraiment mon preferer avec leauel on s'amuse le plus.</p>
+                    <div class="card-actions justify-end">
+                        <button onclick="toggleDetails('details-sl52')" class="btn btn-sm bg-pink-500 text-white">+ D'infos</button>
+                    </div>
+                    <div id="details-sl52" class="mt-2 hidden text-sm">
+                        <ul class="list-disc pl-5">
+                            <li>Longueur : 5,20 m</li>
+                            <li>Très rapide et puissant</li>
+                            <li>Pour amateurs de sensations fort et débuter la compétition</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
 
